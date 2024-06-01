@@ -1,0 +1,179 @@
+/* 스크롤 바 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #D9D9D9; 
+}
+header a:hover{
+
+  box-shadow:0 !important;
+}
+/* 메인1 */
+
+/* 히어로부분 */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.fade-in.show {
+  opacity: 1;
+}
+
+/* Section 섹션 부분 */
+.scroll-fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 2s ease-out;
+}
+.scroll-fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/*
+.scroll-container {
+  height: 100vh; 페이지의 높이를 늘려 스크롤이 필요하도록 만듭니다. 
+  position: relative;
+}
+.contents {
+  height: 100%;  화면 높이에 맞춥니다.
+  width: 100%;
+  position: absolute;
+}
+*/
+
+
+/* shadowSmall */
+.main_list li {
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.04); 
+}
+.main_list li:hover {
+    transform: translateY(-40px); transition: all 0.3s;
+    box-shadow: 0px 4px 60px 0px #00000033;
+
+}
+.main_list li:hover a.go_to_site{
+  border-radius: 40px 0 40px 0;
+  bottom: -53px;
+  height: 106px;
+  width: 290px;
+  background: #0073C7;
+  color: #fff;
+  transition: all 0.3s;
+}
+.main_list li:hover a.go_to_site .ball{
+  transition: all 0.3s;
+  left: 100%;
+  background: #00000033;
+  transform: scale(6);
+}
+
+
+.navtabs, .tab ul {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .navtab, .tab ul li {
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  .navtab:hover, .tab ul li:hover {
+    color: #0073C7;
+  }
+  .navtab.active, .tab.active ul li:hover  {
+    color: #fff;
+    font-weight: 600;
+  }
+  .underline {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    background: #0073C7;
+    transition: left 0.3s ease, width 0.3s ease;
+    z-index: -10;
+  }
+  .content {
+    display: none;
+    text-align: center;
+  }
+  .content.active {
+    display: block;
+  }
+
+  
+
+  .tab-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .tab-nav-item.active .tab-nav-link {
+    background-color: #ccc;
+  }
+  .tab-nav-link {
+    display: block;
+   
+  }
+
+  .tab-pane {
+    display: none;
+  }
+  .tab-pane.active {
+    display: block;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.animate-rotaing {
+    animation: spin 5s infinite linear;
+}
+
+.tab-nav li:hover{
+  background: rgb(244 244 245);
+  color: rgb(2 132 199 );
+  font-weight: 600;
+}
+
+/* tag { width: 70px;
+
+} */
+
+
+
+/*-------------------------- 메인2  --------------------*/
+.main2_menu li>div{
+  overflow: hidden;  
+}
+.main2_menu li>div:hover, a:hover{
+  box-shadow: 0px 8px 32px 0px #0000001A;
+  transition: all .3s;
+}
+
+.notice li {
+  overflow: hidden;
+}
+.notice li span {
+  text-overflow:ellipsis;
+}
+
+
+.txt_post{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: box;
+  margin-top:1px;
+  max-height:80px;
+  overflow:hidden;
+  vertical-align:top;
+  text-overflow: ellipsis;
+  word-break:break-all;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:3
+
+}
+

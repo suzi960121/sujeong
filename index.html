@@ -1,11 +1,626 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>웹민원센터</title>
+
+  <!-- 폰트 -->
+  <link rel="stylesheet" href="./css/font.css" />
+
+  <!--tailwind.css -->
+  <link rel="stylesheet" href="./css/index.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- 커스텀 CSS -->
+  <link rel="stylesheet" href="tailwind.config.js" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/output.css" />
+
+  <!-- <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/tw-elements/css/tw-elements.min.css" />
+  <script src="https://cdn.tailwindcss.com/3.3.0"></script> -->
+  <!-- cdn.tailwindcss -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- swiper -->
+
+  <!--custom js -->
+  <script src="./js/main.js"></script>
 </head>
-<body>
-    test
+
+<body class="overflow-x-hidden font-['Pretendard'] ">
+  <a href="#" id="scrollToTop" class="fixed right-0 bottom-20 w-[140px] z-10"><img src="img/floationg_btn.png"></a>
+
+  <!-- 운격지원 -->
+  <a href="#" class="absolute w-[140px] h-[140px] right-[8.13%] top-[155px] z-10 hover:shadow-xl rounded-[999px] transition duration-300 ease-in-out fade-in">
+    <div class="absolute top-0 right-0 w-full h-full animate-rotaing" style="">
+      <img src="./img/floating_button_rotating_letter.svg" class="absolute top-0 left-0 " style="transform: scale(1.5);">
+    </div>
+    <img src="./img/floating_button.png" class="absolute top-0 left-0">
+  </a>
+
+  <header class="fixed z-50 w-full py-2 bg-white/50 backdrop-blur-md h-[74px] fade-in">
+    <div class="container flex items-center justify-between ">
+      <a href="#" style=""><img src="./img/logo.png" class="h-full" style=""></a>
+      <div class="flex items-center justify-end h-8 grow shrink basis-0">
+        <div class="pl-2.5 items-center gap-2 flex self-stretch 화살표">
+          <div class="text-sm font-normal text-zinc-500 ">Language</div>
+        </div>
+        <div class="flex self-stretch justify-center pl-6">
+          <div class="flex h-8">
+            <div class="relative w-8 h-8 border border-gray-200">
+              <div class="w-3 h-px left-[10px] top-[16px] absolute bg-zinc-500"></div>
+
+              <div class="w-px h-3 left-[16px] top-[10px] absolute bg-zinc-500"></div>
+            </div>
+
+          </div>
+          <div class="flex h-8">
+            <div class="relative w-8 h-8 border border-gray-200">
+              <div class="w-3 h-px left-[10px] top-[16px] absolute bg-zinc-500"></div>
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="Hero relative py-32 overflow-hidden bg-sky-50 scroll-container" data-scroll-container>
+    <div class="container ">
+      <h1 class="flex items-center justify-center gap-6 text-5xl font-normal text-center uppercase grow text-zinc-600 px-36 fade-in">
+        <img src="./img/heading1.png">
+      </h1>
+
+      <div class="flex items-center justify-center pb-10 grow fade-in">
+        <form class="flex flex-col  self-stretch justify-center grow shrink basis-0 max-w-[600px] px-[48px] bg-white rounded-full shadow-sm border border-blue-500 gap-2.5 h-16 relative"
+          style="box-shadow: 0px 6px 30px 0px #0000001A;">
+          <input class="w-full text-lg font-normal leading-7 outline-none text-neutral-500"
+            placeholder="증명서 발급을 원하시는 학교 혹은 기관명을 검색해주세요."><img src="./img/search.png" class="absolute top-0 right-0">
+        </form>
+      </div>
+
+      <ul class="flex w-full gap-4 pt-4 pb-10 main_list fade-in">
+
+        <li class="relative flex flex-col self-stretch mt-10 shadow-sm h-96 rounded-3xl grow">
+          <div
+            class="flex flex-col items-center self-stretch justify-center border h-96 bg-sky-200 rounded-3xl border-zinc-100 peer">
+            <img src="./img/main1.png">
+            <p
+              class="flex flex-col items-center self-stretch pt-4 text-3xl font-semibold text-center uppercase text-zinc-800">
+              증명서발급</p>
+          </div>
+          <a
+            class="absolute bottom-0 right-0 flex items-center h-16 gap-5 py-5 pr-24 bg-white pl-7 rounded-tl-3xl rounded-br-3xl transform group-hover:w-[290px] transition-all go_to_site text-lg font-normal text-zinc-800 ">
+            <p class="">바로가기</p>
+            <div class="relative"><img src="./img/arrow.png">
+              <div class="absolute top-0 left-0 w-2 h-2 bg-blue-500 rounded-full ball"></div>
+            </div>
+          </a>
+        </li>
+
+        <li class="relative flex flex-col self-stretch shadow-sm h-96 rounded-3xl grow">
+          <div
+            class="flex flex-col items-center self-stretch justify-center border h-96 bg-[#93C3FF] rounded-3xl border-zinc-100">
+            <img src="./img/main2.png">
+            <p
+              class="flex flex-col items-center self-stretch pt-4 text-3xl font-semibold text-center uppercase text-zinc-800">
+              증명서발급</p>
+          </div>
+          <a
+            class="absolute bottom-0 right-0 flex items-center h-16 gap-5 py-5 pr-24 bg-white pl-7 rounded-tl-3xl rounded-br-3xl transform group-hover:w-[290px] transition-all go_to_site text-lg font-normal text-zinc-800 ">
+            <p class="">바로가기</p>
+            <div class="relative"><img src="./img/arrow.png">
+              <div class="absolute top-0 left-0 w-2 h-2 bg-blue-500 rounded-full ball"></div>
+            </div>
+          </a>
+        </li>
+        <li class="relative flex flex-col self-stretch mt-10 shadow-sm h-96 rounded-3xl grow">
+          <div
+            class="flex flex-col items-center self-stretch justify-center border h-96 bg-sky-100 rounded-3xl border-zinc-100">
+            <img src="./img/main3.png">
+            <p
+              class="flex flex-col items-center self-stretch pt-4 text-3xl font-semibold text-center uppercase text-zinc-800">
+              증명서발급</p>
+          </div>
+          <a
+            class="absolute bottom-0 right-0 flex items-center h-16 gap-5 py-5 pr-24 bg-white pl-7 rounded-tl-3xl rounded-br-3xl transform group-hover:w-[290px] transition-all go_to_site text-lg font-normal text-zinc-800 ">
+            <p class="">바로가기</p>
+            <div class="relative"><img src="./img/arrow.png">
+              <div class="absolute top-0 left-0 w-2 h-2 bg-blue-500 rounded-full ball"></div>
+            </div>
+          </a>
+        </li>
+        <li class="relative flex flex-col self-stretch shadow-sm h-96 rounded-3xl grow">
+          <div
+            class="flex flex-col items-center self-stretch justify-center border h-96 bg-[#EFEFEF] rounded-3xl border-zinc-100 ">
+            <img src="./img/main4.png" class="mix-blend-luminosity">
+            <p
+              class="flex flex-col items-center self-stretch pt-4 text-3xl font-semibold text-center uppercase text-zinc-800">
+              증명서발급</p>
+          </div>
+          <a
+            class="absolute bottom-0 right-0 flex items-center h-16 gap-5 py-5 pr-24 bg-white pl-7 rounded-tl-3xl rounded-br-3xl transform group-hover:w-[290px] transition-all go_to_site text-lg font-normal text-zinc-800 ">
+            <p class="">바로가기</p>
+            <div class="relative"><img src="./img/arrow.png">
+              <div class="absolute top-0 left-0 w-2 h-2 bg-blue-500 rounded-full ball"></div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <img src="./img/hero_bg.png" class="absolute -bottom-0.5 left-0 drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]">
+  </section>
+  <!-- Hero -->
+
+  <section class="pt-32 pb-20 scroll-fade-in service scroll-container" data-scroll-container>
+    <div class="container ">
+      <div class="relative flex items-center self-stretch gap-8 pb-8">
+        <h2 class="text-[36px] items-center gap-4 flex text-zinc-800 text-4xl font-semibold">
+          <p class="">
+            <span class="text-[#0073C7] font-semibold">증명서 발급</span><span style=""> 서비스 대학교</span>
+
+          </p>
+          <p class="text-base font-normal text-neutral-400">링크를 누를 시, 해당 학교증명서 페이지로 이동합니다.</p>
+        </h2>
+        <img src="./img/locky.png" class="absolute bottom-0 right-0">
+      </div>
+
+      <ul class="border-b navtabs border-neutral-300 ">
+        <li class="flex flex-col items-center justify-center h-12 p-6 navtab grow active" data-target="home">전국</li>
+        <li class="flex flex-col items-center justify-center h-12 p-6 navtab grow" data-target="about">서울</li>
+        <li class="flex flex-col items-center justify-center h-12 p-6 navtab grow" data-target="contact">경기도</li>
+        <li class="flex flex-col items-center justify-center h-12 p-6 navtab grow" data-target="page4">특별시·광역시</li>
+        <li class="flex flex-col items-center justify-center h-12 p-6 navtab grow" data-target="page5">강원도</li>
+        <li class="flex flex-col items-center justify-center h-12 p-6 navtab grow" data-target="page6">충청도</li>
+        <li class="flex flex-col items-center justify-center h-12 p-6 navtab grow" data-target="page7">전라도</li>
+        <li class="underline" style="width: 163px; left: 0px;"></li>
+        <li class="flex flex-col items-center justify-center h-12 p-6 navtab grow" data-target="page8">경상도</li>
+        <li class="flex flex-col items-center justify-center h-12 p-6 navtab grow" data-target="page9">제주도</li>
+      </ul>
+
+      <div id="home" class="content active">
+        <div class="flex flex-col w-full gap-8 px-4 py-10 bg-white tab max-h-[400px] overflow-y-scroll relative">
+          <ul class="flex items-center self-stretch gap-2 rounded-lg tab-nav" style="
+">
+            <li
+              class="flex flex-col items-center self-stretch justify-center py-2 border rounded-lg grow tab-nav-item border- shrink basis-0 border-neutral-300 bg-zinc-100">
+              <a href="#one" class="">
+
+                <p class="text-lg font-semibold text-sky-600 ">가</p>
+              </a>
+            </li>
+            <li
+              class="flex flex-col items-center self-stretch justify-center py-2 bg-white border rounded-lg grow tab-nav-item shrink basis-0 border-neutral-300">
+              <a href="#one" class="">
+
+                <p class="">나</p>
+              </a>
+            </li>
+
+            <!-- More list items here -->
+            <li
+              class="flex flex-col items-center self-stretch justify-center py-2 bg-white border rounded-lg grow shrink basis-0 border-neutral-300 ">
+              <p class="text-lg font-normal text-zinc-800 ">다</p>
+            </li>
+            <li
+              class="flex flex-col items-center self-stretch justify-center py-2 bg-white border rounded-lg grow shrink basis-0 border-neutral-300 ">
+              <p class="text-lg font-normal text-zinc-800 ">라</p>
+            </li>
+            <li
+              class="flex flex-col items-center self-stretch justify-center py-2 bg-white border rounded-lg grow shrink basis-0 border-neutral-300 ">
+              <p class="text-lg font-normal text-zinc-800 ">마</p>
+            </li>
+            <li
+              class="flex flex-col items-center self-stretch justify-center py-2 bg-white border rounded-lg grow shrink basis-0 border-neutral-300 ">
+              <p class="text-lg font-normal text-zinc-800 ">바</p>
+            </li>
+            <li
+              class="flex flex-col items-center self-stretch justify-center py-2 bg-white border rounded-lg grow shrink basis-0 border-neutral-300 ">
+              <p class="text-lg font-normal text-zinc-800 ">사</p>
+            </li>
+            <li
+              class="flex flex-col items-center self-stretch justify-center py-2 bg-white border rounded-lg grow shrink basis-0 border-neutral-300 ">
+              <p class="text-lg font-normal text-zinc-800 ">아</p>
+            </li>
+            <li
+              class="flex flex-col items-center self-stretch justify-center py-2 bg-white border rounded-lg grow shrink basis-0 border-neutral-300 ">
+              <p class="text-lg font-normal text-zinc-800 ">자</p>
+            </li>
+            <li
+              class="flex flex-col items-center self-stretch justify-center py-2 bg-white border rounded-lg grow shrink basis-0 border-neutral-300 ">
+              <p class="text-lg font-normal text-zinc-800 ">차</p>
+            </li>
+            <li
+              class="flex flex-col items-center self-stretch justify-center py-2 bg-white border rounded-lg grow shrink basis-0 border-neutral-300 ">
+              <p class="text-lg font-normal text-zinc-800 ">카</p>
+            </li>
+            <li
+              class="flex flex-col items-center self-stretch justify-center py-2 bg-white border rounded-lg grow shrink basis-0 border-neutral-300 ">
+              <p class="text-lg font-normal text-zinc-800 ">타</p>
+            </li>
+            <li
+              class="flex flex-col items-center self-stretch justify-center py-2 bg-white border rounded-lg grow shrink basis-0 border-neutral-300 ">
+              <p class="text-lg font-normal text-zinc-800 ">파</p>
+            </li>
+            <li
+              class="flex flex-col items-center self-stretch justify-center py-2 bg-white border rounded-lg grow shrink basis-0 border-neutral-300 ">
+              <p class="text-lg font-normal text-zinc-800 ">하</p>
+            </li>
+          </ul>
+
+
+          <img src="./img/tab_list.png" id="one">
+          <img src="./img/tab_list.png" id="two">
+          <img src="./img/tab_list.png"><img src="./img/tab_list.png">
+        </div>
+      </div>
+      <!-- Add other tab  here -->
+
+      <div id="about" class="content">
+        <!-- Content for 서울 tab -->
+      </div>
+      <div id="contact" class="content">
+        <!-- Content for 경기도 tab -->
+      </div>
+      <div id="page4" class="content">
+        <!-- Content for 특별시·광역시 tab -->
+      </div>
+      <!-- More content divs for other tabs -->
+    </div>
+  </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const tabs = document.querySelectorAll('.navtab');
+      const  = document.querySelectorAll('.content');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          // Remove active class from all tabs and 
+          tabs.forEach(t => t.classList.remove('active'));
+          .forEach(c => c.classList.remove('active'));
+
+          // Add active class to clicked tab and corresponding content
+          tab.classList.add('active');
+          document.getElementById(tab.getAttribute('data-target')).classList.add('active');
+        });
+      });
+    });
+  </script>
+  <script>
+    const tabs = document.querySelectorAll('.navtab');
+    const  = document.querySelectorAll('.content');
+    const underline = document.querySelector('.underline');
+
+    function updateUnderline() {
+      const activeTab = document.querySelector('.navtab.active');
+      underline.style.width = `${activeTab.offsetWidth}px`;
+      underline.style.left = `${activeTab.offsetLeft}px`;
+    }
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const target = tab.getAttribute('data-target');
+        .forEach(content => {
+          if (content.id === target) {
+            content.classList.add('active');
+          } else {
+            content.classList.remove('active');
+          }
+        });
+        updateUnderline();
+      });
+    });
+
+    window.addEventListener('resize', updateUnderline);
+    updateUnderline();
+  </script>
+  <!-- 증명서 발급 서비스 대학교 -->
+
+  <section class="scroll-fade-in notice_popup scroll-container" data-scroll-container>
+    <div class="container flex gap-10 ">
+      <div class="flex flex-col grow shrink basis-0">
+        <div class="flex flex-col self-stretch gap-8">
+          <h2 class="text-[36px] items-center gap-4 flex text-zinc-800 text-4xl font-semibold">
+            <p class="">
+              <span>공지사항</span>
+
+            </p>
+          </h2>
+          <ul class="flex items-center gap-8 cursor-pointer grow">
+            <li class="self-stretch items-center gap-2.5 flex p-2 ">
+              <div href="#" class="self-stretch items-center gap-2.5 flex p-2">
+                <p class="w-2 h-2 rounded bg-sky-600"></p>
+                <div class="text-lg font-semibold text-sky-600 ">전체</div>
+              </div>
+            </li>
+            <li class="self-stretch items-center gap-2.5 flex p-2">
+
+              <div class="text-lg">긴급</div>
+            </li>
+            <li class="self-stretch items-center gap-2.5 flex p-2">
+
+              <div class="text-lg">New</div>
+            </li>
+            <li class="self-stretch items-center gap-2.5 flex p-2">
+
+              <div class="text-lg">공통</div>
+            </li>
+          </ul>
+        </div>
+        <ul class="self-stretch pt-0.5 border-t border-neutral-300 flex-col flex flex flex-col  self-stretch  h-64">
+          <li class="flex items-center self-stretch py-4 border-b border-zinc-100">
+            <tag
+              class="flex items-center justify-center px-6 mr-4 text-sm font-semibold text-white bg-red-600 rounded-3xl min-w-16 min-h-8">
+              긴급</tag>
+            <div class="flex flex-col grow shrink basis-0">
+              <div class="self-stretch text-lg font-normal text-zinc-800 ">웹민원센터 개인정보처리방침 개정 안내</div>
+            </div>
+            <div class="flex flex-col items-end bg-white">
+              <div class="text-sm font-normal leading-tight text-right text-neutral-400">2024-05-20</div>
+            </div>
+          </li>
+          <li class="flex items-center self-stretch py-4 border-b border-zinc-100">
+            <tag
+              class="flex items-center justify-center px-6 mr-4 text-sm font-semibold text-white bg-red-600 rounded-3xl min-w-16 min-h-8">
+              긴급</tag>
+            <div class="flex flex-col grow shrink basis-0">
+              <div class="self-stretch text-lg font-normal text-zinc-800 ">웹민원센터 개인정보처리방침 개정 안내</div>
+            </div>
+            <div class="flex flex-col items-end bg-white">
+              <div class="text-sm font-normal leading-tight text-right text-neutral-400">2024-05-20</div>
+            </div>
+          </li>
+          <li class="flex items-center self-stretch py-4 border-b border-zinc-100">
+            <tag
+              class="flex items-center justify-center px-6 bg-[#3681D9] rounded-3xl text-white text-sm font-semibold  mr-4 min-w-16 min-h-8">
+              New</tag>
+            <div class="flex flex-col grow shrink basis-0">
+              <div class="self-stretch text-lg font-normal text-zinc-800 ">웹민원센터 보안증명서 서비스 종료 안내</div>
+            </div>
+            <div class="flex flex-col items-end bg-white">
+              <div class="text-sm font-normal leading-tight text-right text-neutral-400">2024-05-20</div>
+            </div>
+          </li>
+          <li class="flex items-center self-stretch py-4 border-b border-zinc-100">
+            <tag
+              class="flex items-center justify-center px-6 bg-[#2E2E2E] rounded-3xl text-white text-sm font-semibold  mr-4 min-w-16 min-h-8">
+              공통</tag>
+            <div class="flex flex-col grow shrink basis-0">
+              <div class="self-stretch text-lg font-normal text-zinc-800 ">웹민원센터 X 카카오, 대학 전자증명서(PDF) 발급 서비스 오픈</div>
+            </div>
+            <div class="flex flex-col items-end bg-white">
+              <div class="text-sm font-normal leading-tight text-right text-neutral-400">2024-05-20</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="flex flex-col self-stretch gap-8 col-4">
+        <h2 class="h-[43px]"><img src="./img/h2_3.png" class=""></h2>
+        <swiper-container class="w-full cursor-pointer mySwiper">
+          <swiper-slide role="group" aria-label="1 / 4" class="swiper-slide-active" style="width: 536px;"><img
+              src="./img/popupzone.png" class=""></swiper-slide>
+          <swiper-slide role="group" aria-label="2 / 4" class="swiper-slide-next" style="width: 536px;"><img
+              src="./img/popupzone.png" class=""></swiper-slide>
+          <swiper-slide role="group" aria-label="3 / 4" class="" style="width: 536px;"><img src="./img/popupzone.png"
+              class=""></swiper-slide>
+          <swiper-slide role="group" aria-label="4 / 4" class="" style="width: 536px;"><img src="./img/popupzone.png"
+              class=""></swiper-slide>
+        </swiper-container>
+      </div>
+    </div>
+  </section>
+  <!-- 공지사항 & 팝업존 -->
+
+  <section class="flex items-center justify-center gap-16 py-20 scroll-fade-in cardnews_gotosite scroll-container" data-scroll-container>
+    <div class="container flex gap-16 px-4 ">
+      <div class="flex flex-col self-stretch gap-8 grow shrink col-6">
+        <h2 class="h-[43px]"><img src="./img/h2_4.png" class="h-full"></h2>
+        <ul class="flex self-stretch gap-4">
+          <li class="flex flex-col p-4 bg-white border shadow-sm shadow grow shrink basis-0 rounded-xl border-zinc-100"
+            style="box-shadow: 0px 4px 30px 0px #0000000A;">
+            <img class="" src="./img/cardnews.png">
+            <h6 class="flex flex-col self-stretch pt-4 pb-6 text-lg font-normal text-zinc-800 ">[의료개혁 연구소] ep 1. K-바이오헬스
+              산업과 의사과..</h6>
+            <div class="text-sm font-normal leading-tight text-right text-neutral-400">2024-04-25</div>
+          </li>
+          <li class="flex flex-col p-4 bg-white border shadow-sm shadow grow shrink basis-0 rounded-xl border-zinc-100"
+            style="
+    box-shadow: 0px 4px 30px 0px #0000000A;
+">
+            <img class="" src="./img/cardnews-1.png">
+            <h6 class="flex flex-col self-stretch pt-4 pb-6 text-lg font-normal text-zinc-800 ">[의료개혁 연구소] ep 1. K-바이오헬스
+              산업과 의사과..</h6>
+            <div class="text-sm font-normal leading-tight text-right text-neutral-400">2024-04-25</div>
+          </li>
+
+        </ul>
+      </div>
+      <div class="flex flex-col gap-8 grow shrink basis-0 col-6">
+        <div class="flex items-center self-stretch justify-between w-">
+          <h2 class="text-[36px] items-center gap-4 flex text-zinc-800 text-4xl font-semibold">
+            <p class=""><span style="">바로가기 서비스</span></p>
+          </h2>
+
+        </div>
+        <ul class="flex gap-4 grow shrink basis-0">
+          <li class="flex flex-col gap-4 grow shrink basis-0">
+            <div
+              class="flex flex-col self-stretch justify-center h-32 p-6 bg-white border shadow rounded-xl border-zinc-100"
+              style="
+    box-shadow: 0px 4px 30px 0px #0000000A;
+"><img src="./img/link.png" class="w-full"></div>
+            <div
+              class="flex flex-col self-stretch justify-center h-32 p-6 bg-white border shadow rounded-xl border-zinc-100"
+              style="
+    box-shadow: 0px 4px 30px 0px #0000000A;
+"><img src="./img/link-1.png" class="w-full"></div>
+          </li>
+          <li class="flex flex-col gap-4 grow shrink basis-0">
+            <div
+              class="flex flex-col self-stretch justify-center h-32 p-6 bg-white border shadow rounded-xl border-zinc-100"
+              style="
+    box-shadow: 0px 4px 30px 0px #0000000A;
+"><img src="./img/link-2.png" class="w-full"></div>
+            <div
+              class="flex flex-col self-stretch justify-center h-32 p-6 bg-white border shadow rounded-xl border-zinc-100"
+              style="
+    box-shadow: 0px 4px 30px 0px #0000000A;
+"><img src="./img/link-3.png" class="w-full"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- 카드뉴스 & 바로가기 서비스 -->
+
+  <section class="flex items-center justify-center gap-16 pb-20 scroll-fade-in fnq scroll-container" data-scroll-container>
+    <div class="container flex flex-col gap-8 px-4 ">
+      <h2 class="text-[36px] items-center gap-4 flex text-zinc-800 text-4xl font-semibold">
+        <p class=""><span style="">자주묻는 질문</span></p>
+      </h2>
+      <div class="grow">
+        <form class="flex flex-col  self-stretch justify-center grow shrink basis-0 px-5 bg-white border-b border-blue-500 gap-2.5 h-16 relative w-full">
+          <input class="text-neutral-500 text-lg font-normal  leading-7 w-full outline-none pl-[64px]" placeholder="무엇이든 찾아보세요"><img src="./img/search.png" class="absolute top-0 left-0">
+        </form>
+      </div>
+      <div class="flex gap-16">
+        <div><img src="./img/faq_btn.png" class="w-[220px]"></div>
+        <!-- component -->
+        <div class="col-10">
+
+          <div class="w-full">
+            <div id="mainHeading" class="flex items-center justify-between w-full py-8 border-b">
+              <button aria-label="toggler"
+                class="flex items-center justify-between w-full !focus:outline-none outline-none" data-menu="">
+                <div class="">
+                  <p
+                    class="flex items-center justify-center text-base font-medium leading-6 text-gray-800 dark:text-white lg:leading-4">
+                    <span
+                      class="mr-4 text-lg font-semibold leading-6 text-gray-800 lg:mr-6 dark:text-white lg:text-2xl md:text-xl md:leading-5 lg:leading-4">Q1.</span>
+                    ActiveX가 설치되지 않고, 미리보기가 보이지 않습니다.
+                  </p>
+                </div>
+                <img class="transform rotate-180 dark:hidden" src="./img/faq_arrow.png" alt="toggler">
+                <img class="hidden transform dark:block "
+                  src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2dark.svg" alt="toggler">
+              </button>
+            </div>
+            <p id="menu" class="w-full p-6 mt-6 font-normal leading-6 text-gray-600 rounded-sm text -base bg-neutral-50"
+              style="
+    line-height: 180%;
+">
+              신청하시는 페이지 오른쪽 퀵메뉴의 최신버전 수동설치 배너를 클릭하시어 설치 진행 하신 후 컴퓨터를 재부팅 하신 이후에 다시 출력시도 하여 주시기 바랍니다.
+              설치하실 때 설치 페이지가 제대로 띄워지지 않는 경우에는 보안 프로그램이 Active X 설치하는 것을 바이러스로 인식 할 수 있사오니 보안프로그램 실시간 검사를 일시적으로 중단하시고 새로운
+              웹 페이지를 열어서 다시 시도 해주시기 바랍니다.
+              강력한 보안프로그램은 설치진행이 안 되시는 경우가 있으니 이점 유의하여 주시기 바랍니다.
+              ( 보안 프로그램 예: 알약, V3, 바이로봇, 시멘텍, 노피싱, 노턴등 )
+            </p>
+          </div>
+          <div class="w-full">
+            <div id="mainHeading" class="flex items-center justify-between w-full py-8 border-b">
+              <button aria-label="toggler"
+                class="flex items-center justify-between w-full !focus:outline-none outline-none" data-menu="">
+                <div class="">
+                  <p
+                    class="flex items-center justify-center text-base font-medium font-semibold leading-6 text-gray-800 dark:text-white lg:leading-4">
+                    <span
+                      class="mr-4 text-lg font-semibold leading-6 text-gray-800 lg:mr-6 dark:text-white lg:text-2xl md:text-xl md:leading-5 lg:leading-4">Q2.</span>
+                    ActiveX가 설치되지 않고, 미리보기가 보이지 않습니다.
+                  </p>
+                </div>
+                <img class="transform dark:hidden" src="./img/faq_arrow.png" alt="toggler">
+                <img class="hidden transform dark:block "
+                  src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2dark.svg" alt="toggler">
+              </button>
+            </div>
+            <p id="menu"
+              class="hidden w-full p-6 mt-6 font-normal leading-6 text-gray-600 rounded-sm text -base bg-neutral-50"
+              style="
+    line-height: 180%;
+">
+              신청하시는 페이지 오른쪽 퀵메뉴의 최신버전 수동설치 배너를 클릭하시어 설치 진행 하신 후 컴퓨터를 재부팅 하신 이후에 다시 출력시도 하여 주시기 바랍니다.
+              설치하실 때 설치 페이지가 제대로 띄워지지 않는 경우에는 보안 프로그램이 Active X 설치하는 것을 바이러스로 인식 할 수 있사오니 보안프로그램 실시간 검사를 일시적으로 중단하시고 새로운
+              웹 페이지를 열어서 다시 시도 해주시기 바랍니다.
+              강력한 보안프로그램은 설치진행이 안 되시는 경우가 있으니 이점 유의하여 주시기 바랍니다.
+              ( 보안 프로그램 예: 알약, V3, 바이로봇, 시멘텍, 노피싱, 노턴등 )
+            </p>
+          </div>
+          <div class="w-full">
+            <div id="mainHeading" class="flex items-center justify-between w-full py-8 border-b">
+              <button aria-label="toggler"
+                class="flex items-center justify-between w-full !focus:outline-none outline-none" data-menu="">
+                <div class="">
+                  <p
+                    class="flex items-center justify-center text-base font-medium font-semibold leading-6 text-gray-800 dark:text-white lg:leading-4">
+                    <span
+                      class="mr-4 text-lg font-semibold leading-6 text-gray-800 lg:mr-6 dark:text-white lg:text-2xl md:text-xl md:leading-5 lg:leading-4">Q3.</span>
+                    ActiveX가 설치되지 않고, 미리보기가 보이지 않습니다.
+                  </p>
+                </div>
+                <img class="transform dark:hidden" src="./img/faq_arrow.png" alt="toggler">
+                <img class="hidden transform dark:block "
+                  src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2dark.svg" alt="toggler">
+              </button>
+            </div>
+            <p id="menu"
+              class="hidden w-full p-6 mt-6 font-normal leading-6 text-gray-600 rounded-sm text -base bg-neutral-50"
+              style="
+    line-height: 180%;
+">
+              신청하시는 페이지 오른쪽 퀵메뉴의 최신버전 수동설치 배너를 클릭하시어 설치 진행 하신 후 컴퓨터를 재부팅 하신 이후에 다시 출력시도 하여 주시기 바랍니다.
+              설치하실 때 설치 페이지가 제대로 띄워지지 않는 경우에는 보안 프로그램이 Active X 설치하는 것을 바이러스로 인식 할 수 있사오니 보안프로그램 실시간 검사를 일시적으로 중단하시고 새로운
+              웹 페이지를 열어서 다시 시도 해주시기 바랍니다.
+              강력한 보안프로그램은 설치진행이 안 되시는 경우가 있으니 이점 유의하여 주시기 바랍니다.
+              ( 보안 프로그램 예: 알약, V3, 바이로봇, 시멘텍, 노피싱, 노턴등 )
+            </p>
+          </div>
+          <script>
+            let elements = document.querySelectorAll("[data-menu]");
+            for (let i = 0; i < elements.length; i++) {
+              let main = elements[i];
+
+              main.addEventListener("click", function () {
+                let element = main.parentElement.parentElement;
+                let indicators = main.querySelectorAll("img");
+                let child = element.querySelector("#menu");
+                let h = element.querySelector("#mainHeading button p");
+
+                h.classList.toggle("font-semibold");
+                child.classList.toggle("hidden");
+                // console.log(indicators[0]);
+                indicators[0].classList.toggle("rotate-180");
+              });
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 자주묻는 질문 -->
+
+  <footer>
+    <img src="./img/footer.png">
+  </footer>
+  <!-- <footer> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
+
 </html>
