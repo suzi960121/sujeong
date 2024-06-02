@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-<<<<<<< HEAD
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <title>웹민원센터</title>
@@ -19,46 +18,33 @@
   <link rel="stylesheet" href="./css/main.css" />
   <link rel="stylesheet" href="./css/output.css" />
 
+  <!-- cdn.tailwindcss -->
   <!-- <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/tw-elements/css/tw-elements.min.css" />
   <script src="https://cdn.tailwindcss.com/3.3.0"></script> -->
-  <!-- cdn.tailwindcss -->
+  
+  <!-- swiper -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <!-- swiper -->
 
   <!--custom js -->
-  <script src="./js/main.js"></script>
-=======
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <title>웹민원센터</title>
-
-    <!-- 폰트 -->
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/font.css" />
-
-  <!--tailwind.css -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="css/index.min.css">
-
-  <!-- 커스텀 CSS -->
-  <link rel="stylesheet" href="/css/common.css" />
-  <link rel="stylesheet" href="/css/output.css" />
-
-  
->>>>>>> 7d38ef9517187c784d1d8b0bacbc6a976b8500ff
+  <script defer src="./js/main.js"></script>
 </head>
 
 <body class="overflow-x-hidden font-['Pretendard'] ">
-  <a href="#" id="scrollToTop" class="fixed right-0 bottom-20 w-[140px] z-10"><img src="img/floationg_btn.png"></a>
+  <div class="fixed right-[3.65%] bottom-20 z-[999] w-[70px]">
+    <a href="#" class="absolute w-full block right-0 bottom-[95%]"><img src="img/floationg_btn_top.png"></a>
+    <a href="#" id="scrollToTop" class="mb-1 w-full block"><img src="img/floationg_btn.png"></a>
+    <a href="#" class="w-full block"><img src="img/floationg_btn2.png"></a>
+  </div>
+  <!-- 플로팅 바 -->
 
-  <!-- 운격지원 -->
   <a href="#" class="absolute w-[140px] h-[140px] right-[8.13%] top-[155px] z-10 hover:shadow-xl rounded-[999px] transition duration-300 ease-in-out fade-in">
     <div class="absolute top-0 right-0 w-full h-full animate-rotaing" style="">
       <img src="./img/floating_button_rotating_letter.svg" class="absolute top-0 left-0 " style="transform: scale(1.5);">
     </div>
     <img src="./img/floating_button.png" class="absolute top-0 left-0">
   </a>
+  <!-- 히어로 섹션에 원격지원 돌아가는 컴포넌트 -->
 
   <header class="fixed z-50 w-full py-2 bg-white/50 backdrop-blur-md h-[74px] fade-in">
     <div class="container flex items-center justify-between ">
@@ -88,6 +74,7 @@
       </div>
     </div>
   </header>
+  <!-- 헤더 -->
 
   <section class="Hero relative py-32 overflow-hidden bg-sky-50 scroll-container" data-scroll-container>
     <div class="container ">
@@ -293,52 +280,10 @@
     </div>
   </section>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const tabs = document.querySelectorAll('.navtab');
-      const  = document.querySelectorAll('.content');
 
-      tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          // Remove active class from all tabs and 
-          tabs.forEach(t => t.classList.remove('active'));
-          .forEach(c => c.classList.remove('active'));
-
-          // Add active class to clicked tab and corresponding content
-          tab.classList.add('active');
-          document.getElementById(tab.getAttribute('data-target')).classList.add('active');
-        });
-      });
-    });
   </script>
   <script>
-    const tabs = document.querySelectorAll('.navtab');
-    const  = document.querySelectorAll('.content');
-    const underline = document.querySelector('.underline');
-
-    function updateUnderline() {
-      const activeTab = document.querySelector('.navtab.active');
-      underline.style.width = `${activeTab.offsetWidth}px`;
-      underline.style.left = `${activeTab.offsetLeft}px`;
-    }
-
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        const target = tab.getAttribute('data-target');
-        .forEach(content => {
-          if (content.id === target) {
-            content.classList.add('active');
-          } else {
-            content.classList.remove('active');
-          }
-        });
-        updateUnderline();
-      });
-    });
-
-    window.addEventListener('resize', updateUnderline);
-    updateUnderline();
+   
   </script>
   <!-- 증명서 발급 서비스 대학교 -->
 

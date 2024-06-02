@@ -7,17 +7,7 @@
 @layer base {
 a {@apply text-grey700;}
 
-<<<<<<< HEAD
-=======
-.work_category{@apply px-3 py-2 bg-secondary100 rounded-full gap-2 flex text-secondary500 text-sm font-bold leading-none w-fit border-none;}
-.work_category .ball {@apply w-4 h-4 relative bg-secondary500 rounded-full flex-none;}
-
-.work_category.side{@apply bg-rose-200 text-primary500;}
-.work_category.side .ball {@apply bg-primary500;}
-
->>>>>>> 7d38ef9517187c784d1d8b0bacbc6a976b8500ff
-/* 폰트 */
-.space_grotesk{@apply font-['Space_Grotesk',_sans-serif];}
+/* 그리드 */
 .col-auto { @apply max-w-[100%] flex-[0_0_auto];}
 .col-1 { @apply max-w-[8.33333%] flex-[0_0_8.33333%];}
 .col-2 { @apply max-w-[16.66667%] flex-[0_0_16.66667%];}
@@ -37,15 +27,10 @@ a {@apply text-grey700;}
 /* nav ul li{@apply ;} */
 
 /* 타이틀 */
-h1,h2,h3,h4,h5,h6{@apply font-normal;}
-h1.title,h2.title,h3.title,h4.title,h5.title,h6.title{@apply font-bold;}
-/* h1[class*="comma"],h2[class*="comma"],h3[class*="comma"],h4[class*="comma"],h5[class*="comma"],h6[class*="comma"]{@apply !font-normal;} */
+h1,h2,h3,h4,h5,h6{@apply font-semibold;}
+
 h1,.h1{@apply text-6xl sm:leading-[150%];} 
-<<<<<<< HEAD
 h2,.h2{@apply text-[36px]  sm:leading-[150%];}
-=======
-h2,.h2{@apply text-5xl sm:leading-[150%];}
->>>>>>> 7d38ef9517187c784d1d8b0bacbc6a976b8500ff
 h3,.h3{@apply text-4xl sm:leading-[150%];}
 h4,.h4{@apply text-3xl sm:leading-[150%];}
 h5,.h5{@apply text-2xl sm:leading-[150%];}

@@ -1,3 +1,12 @@
+ //  스크롤을 맨 위로 이동하는 기능
+ document.getElementById('scrollToTop').addEventListener('click', (event) => {
+  event.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
 // Hero fade in
 document.addEventListener('DOMContentLoaded', () => {
     const elements = document.querySelectorAll('.fade-in');
@@ -30,41 +39,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-// smooth scroll
-  // document.addEventListener('DOMContentLoaded', () => {
-  //   const container = document.querySelector('[data-scroll-container]');
-  //   let lastScrollY = window.scrollY;
-  //   let currentScrollY = window.scrollY;
-  //   let ticking = false;
+  const tabs = document.querySelectorAll('.navtab');
+  const contents = document.querySelectorAll('.content');
+  const underline = document.querySelector('.underline');
 
-  //   const updateScroll = () => {
-  //     currentScrollY = window.scrollY;
-  //     const deltaY = lastScrollY - currentScrollY;
-  //     const translateY = Math.max(0, -currentScrollY);
+  function updateUnderline() {
+    const activeTab = document.querySelector('.navtab.active');
+    underline.style.width = `${activeTab.offsetWidth}px`;
+    underline.style.left = `${activeTab.offsetLeft}px`;
+  }
 
-  //     container.style.transform = `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${translateY}, 0, 1)`;
-  //     container.style.opacity = 1;
-  //     container.style.pointerEvents = 'all';
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const target = tab.getAttribute('data-target');
+      contents.forEach(content => {
+        if (content.id === target) {
+          content.classList.add('active');
+        } else {
+          content.classList.remove('active');
+        }
+      });
+      updateUnderline();
+    });
+  });
 
-  //     lastScrollY = currentScrollY;
-  //     ticking = false;
-  //   };
+  window.addEventListener('resize', updateUnderline);
+  updateUnderline();
 
-  //   const requestTick = () => {
-  //     if (!ticking) {
-  //       requestAnimationFrame(updateScroll);
-  //       ticking = true;
-  //     }
-  //   };
-
-  //   window.addEventListener('scroll', requestTick);
-
-  //   // 스크롤을 맨 위로 이동하는 기능
-  //   document.getElementById('scrollToTop').addEventListener('click', (event) => {
-  //     event.preventDefault();
-  //     window.scrollTo({
-  //       top: 0,
-  //       behavior: 'smooth'
-  //     });
-  //   });
-  // });
+ 
