@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" class="" >
+<head>
+  <meta charset="UTF-8">
+  <title>한국정보인증</title>
+  
+  
+  <!-- 폰트 -->
+  <link href="./css/font.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- 스와이퍼 -->
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
+
+  
+  <!-- css -->
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/main_scroll.css">
+  <link rel="stylesheet" href="./css/infinite_scroll.css">
+  <link rel="stylesheet" href="./css/swiper.css">
+
+  <!-- 테일윈드 CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          },
+          animation: {
+        'animate-spin': 'spin 3s linear infinite',
+      },
+          
+          
+        }
+      }
+    };
+  </script>
+</head>
+<body class="font-['Pretendard'] relative w-full h-full overflow-x-hidden overflow-y-scroll">
+<header id="header" class="header blur_header" data-header-theme="false">
+
+  <div class="header_inner">
+
+      <h1 class="logo">
+          <a href="main.html" class="lk_main">
+              <img src="img/kica_logo.svg" alt="한국정보인증 로고">
+              <span class="blind">KISA</span>
+          </a>
+      </h1>
+
+      <nav class="nav" id="mainMenu">
+          <ul class="gnb_list">
+              <li class="list_item">
+                  <a href="#none" class="lk_item">KICA소개<span class="bar"></span>
+                  </a>
+                  <ul class="gnb_list_inner">
+                      <li>
+                          <a href="html/kica/introduce.html">회사소개</a>
+                      </li>
+                      <li>
+                          <a href="html/kica/group.html">그룹사</a>
+                      </li>
+                      <li>
+                          <a href="html/kica/map.html">오시는 길</a>
+                      </li>
+                      <li>
+                          <a href="html/kica/contactus.html">문의하기</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="list_item">
+                  <a href="#none" class="lk_item">서비스<span class="bar"></span>
+                  </a>
+                  <ul class="gnb_list_inner ser_gnb">
+                      <li>
+                          <a href="html/service/service_1.html">인증 서비스</a>
+                      </li>
+                      <li>
+                          <a href="html/service/service_2.html">증명 서비스</a>
+                      </li>
+                      <li>
+                          <a href="html/service/service_3.html">전자계약 서비스</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="list_item">
+                  <a href="html/blog/blog.html" class="lk_item">이야기<span class="bar"></span>
+                  </a>
+              </li>
+              <li class="list_item">
+                  <a href="#none" class="lk_item">IR<span class="bar"></span>
+                  </a>
+                  <ul class="gnb_list_inner">
+                      <li>
+                          <a href="html/ir/shareholder.html">주주구성</a>
+                      </li>
+                      <li>
+                          <a href="html/ir/financialstatements.html">재무정보</a>
+                      </li>
+                      <li>
+                          <a href="html/ir/corporatedisclosure.html">공시자료</a>
+                      </li>
+                      <li>
+                          <a href="html/ir/notice.html">공지사항</a>
+                      </li>
+                      <li>
+                          <a href="html/ir/biddingnotice.html">입찰공고</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="list_item">
+                  <a href="#none" class="lk_item" target="_blank">채용<span class="bar"></span>
+                  </a>
+                  <ul class="gnb_list_inner last_gnb">
+                      <li>
+                          <a href="html/recruit/recruit.html">채용 공고</a>
+                      </li>
+                      <li>
+                          <a href="html/recruit/recruit_info.html">조직문화 &amp; 복지</a>
+                      </li>
+                      <li>
+                          <a href="html/recruit/recruit_team.html">팀 소개</a>
+                      </li>
+                      <li>
+                          <a href="html/recruit/recruit_faq.html">FAQ</a>
+                      </li>
+                  </ul>
+              </li>
+          </ul>
+      </nav>
+
+  </div>
+
+  <div class="mob_header">
+      <div class="mob_header_container">
+          <h1 class="logo">
+              <a href="main.html" class="lk_main">
+                  <img src="img/kica_logo.svg" alt="한국정보인증 로고">
+                  <span class="blind">KISA</span>
+              </a>
+          </h1>
+          <div id="hamburger-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+              <svg width="33" height="27" viewBox="0 0 33 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.875 0C0.839466 0 0 0.839466 0 1.875V1.875C0 2.91053 0.839466 3.75 1.875 3.75H31.125C32.1605 3.75 33 2.91053 33 1.875V1.875C33 0.839466 32.1605 0 31.125 0H1.875ZM1.875 11.1375C0.839466 11.1375 0 11.977 0 13.0125V13.0125C0 14.048 0.839466 14.8875 1.875 14.8875H31.125C32.1605 14.8875 33 14.048 33 13.0125V13.0125C33 11.977 32.1605 11.1375 31.125 11.1375H1.875ZM1.875 22.3875C0.839466 22.3875 0 23.227 0 24.2625V24.2625C0 25.298 0.839466 26.1375 1.875 26.1375H31.125C32.1605 26.1375 33 25.298 33 24.2625V24.2625C33 23.227 32.1605 22.3875 31.125 22.3875H1.875Z" fill="black"></path>
+              </svg>
+
+          </div>
+      </div>
+      <nav class="mob_nav" id="mainMobMenu">
+          <div class="mob_nav_inner">
+              <ul class="gnb_list">
+                  <li class="list_item">
+                      <a href="#none" class="lk_item">KICA소개<span class="bar"></span>
+                      </a>
+                      <ul class="gnb_list_inner">
+                          <li>
+                              <a href="html/kica/introduce.html">회사소개</a>
+                          </li>
+                          <li>
+                              <a href="html/kica/group.html">그룹사</a>
+                          </li>
+                          <li>
+                              <a href="html/kica/map.html">오시는 길</a>
+                          </li>
+                          <li>
+                              <a href="html/kica/contactus.html">문의하기</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="list_item">
+                      <a href="#none" class="lk_item">서비스<span class="bar"></span>
+                      </a>
+                      <ul class="gnb_list_inner">
+                          <li>
+                              <a href="html/service/service_1.html">인증 서비스</a>
+                          </li>
+                          <li>
+                              <a href="html/service/service_2.html">증명 서비스</a>
+                          </li>
+                          <li>
+                              <a href="html/service/service_3.html">전자계약 서비스</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="list_item">
+                      <a href="html/blog/blog.html" class="lk_item_a">이야기<span class="bar"></span>
+                      </a>
+                  </li>
+                  <li class="list_item">
+                      <a href="#none" class="lk_item">IR<span class="bar"></span>
+                      </a>
+                      <ul class="gnb_list_inner">
+                          <li>
+                              <a href="html/ir/shareholder.html">주주구성</a>
+                          </li>
+                          <li>
+                              <a href="html/ir/financialstatements.html">재무정보</a>
+                          </li>
+                          <li>
+                              <a href="html/ir/corporatedisclosure.html">공시자료</a>
+                          </li>
+                          <li>
+                              <a href="html/ir/notice.html">공지사항</a>
+                          </li>
+                          <li>
+                              <a href="html/ir/biddingnotice.html">입찰공고</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="list_item">
+                      <a href="#none" class="lk_item">채용<span class="bar"></span>
+                      </a>
+                      <ul class="gnb_list_inner">
+                          <li>
+                              <a href="html/recruit/recruit.html">채용 공고</a>
+                          </li>
+                          <li>
+                              <a href="html/recruit/recruit_info.html">조직문화 &amp; 복지</a>
+                          </li>
+                          <li>
+                              <a href="html/recruit/recruit_team.html">팀 소개</a>
+                          </li>
+                          <li>
+                              <a href="html/recruit/recruit_faq.html">FAQ</a>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+  </div>
+
+</header>
+<!-- 헤더 -->
+<section class='container hero'>
+    
+  <div class="absolute bottom-[50px] left-[213px] w-[140px] h-[140px] flex items-center justify-center z-10" style="mix-blend-mode: difference;filter: invert(1);transition-duration: 0.8s">
+    <img src="img/scroll_text.png" alt="한국정보인증 로고" class="absolute top-0 left-0 w-full animate-spin spin-slow"style="animation: spin 5s linear infinite;" >
+    <img class="animate-bounce" src="img/scroll_arrow.png" alt="한국정보인증 로고" >
+  </div>
+  <!-- 돌아가는 화살 -->
+    
+
+  <div class='absolute w-full panel max-w-[1600px] z-10'>
+    <h1 class="flex flex-col w-full h-full gap-11 pt-[260px] px-[213px]">
+      <div class="flex flex-col items-center w-full ">
+        <p class="line text-[120px] font-thin w-full"><span>인증과 증명이 만나</span></p>
+        <p class="line text-[120px]"><span><strong class="font-bold">새로운 가치</strong>를 만들다</span></p>
+      </div>
+      <div class="flex flex-col items-center w-full ">
+        <p class="line text-[40px] font-normal"><span> 인증  증명플랫폼 1위 KICA</span></p>
+      </div>
+    </h1>
+    
+  </div>
+  <!-- 하나 -->
+
+  <div class='bg-white panel panel10'>
+    <h1>
+      40%<-
+    </h1>
+  </div>
+  <!-- 둘 -->
+  
+  <div class='panel'>
+    <h1>
+    </h1>
+  </div>
+  <!-- 셋 -->
+
+  <div class="infinitescroll absolute bottom-0 w-full left-[384px] overflow-hidden">
+    <div class="horizontal-scrolling-items text-[#0062CC] text-[200px] relative z-10">
+    
+      <p class="horizontal-scrolling-items__item font-[Play] font-bold">
+        We are building a safer future with high-tech defense solutions
+      </p>
+      
+      <p class="horizontal-scrolling-items__item font-[Play] font-bold">
+        We are building a safer future with high-tech defense solutions&nbsp
+      </p>
+    
+    </div>
+    
+    <!-- <div class="block w-full bg-white h-[190px]  absolute bottom-0 left-0 -z-0"></div> -->
+      
+  </div>
+  <!-- 무한반복 루프 텍스트 -->
+  
+</section>
+<!-- 스크롤 1 Hero 섹션 -->
+
+<div class="relative top-0 left-0 z-10 w-full overflow-hidden bg-white will-change-transform smooth_scroll mt-[100vh]">
+
+  <div class="">
+    <section class="relative w-full m-auto normaldiv">
+      <div class="pt-[180px] flex flex-col max-w-[1495px] mx-auto w-full">
+        <h2 class="text-[68px] text-[#007AFF] font-bold flex gap-[168px]">
+          Business
+          <p class="text-[28px] text-black/80 font-normal ">모두가 안심할 수 있는 세상을 위해<br> 가치 있는 서비스를 제공합니다.</p>
+        </h2>
+
+        <main class="">
+          <div class=" max-w-[1060px] overflow-visible">
+            <div class="relative overflow-hidden swiper px-[90px]">
+              <ul class="pt-24 swiper-wrapper">
+                <li class="rounded-[50px] swiper-slide swiper-slide--one h-[653px] overflow-hidden">
+                  <a href="#!" class="block">
+                    <h2>공동인증서</h2>
+                    <button>
+                      <p>보러가기</p>
+                      <svg xmlns="http://www.w3.org/2000/svg"class="w-6 h-6"fill="none"viewBox="0 0 24 24"stroke="currentColor"stroke-width="4">
+                      <path stroke-linecap="round"stroke-linejoin="round"d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                      </svg>
+                    </button>
+                  </a>
+                </li>
+                <li class="rounded-[50px] swiper-slide swiper-slide--two h-[653px] overflow-hidden">
+                  <a href="#!" class="block">
+                    <h2>증명 발급 서비스</h2>
+                    <button>
+                      <p>보러가기</p>
+                      <svg xmlns="http://www.w3.org/2000/svg"class="w-6 h-6"fill="none"viewBox="0 0 24 24"stroke="currentColor"stroke-width="4">
+                      <path stroke-linecap="round"stroke-linejoin="round"d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                      </svg>
+                    </button>
+                  </a>
+                </li>
+                <li class="rounded-[50px] swiper-slide swiper-slide--three h-[653px] overflow-hidden">
+                  <a href="#!" class="block">
+                    <h2>전자계약 서비스</h2>
+                    <button>
+                      <p>보러가기</p>
+                      <svg xmlns="http://www.w3.org/2000/svg"class="w-6 h-6"fill="none"viewBox="0 0 24 24"stroke="currentColor"stroke-width="4">
+                      <path stroke-linecap="round"stroke-linejoin="round"d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                      </svg>
+                    </button>
+                  </a>
+                </li>
+  
+              </ul>
+              
+              <div class="absolute top-0 left-0 w-full h-full">
+                <div class="swiper-button-prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true"></div>
+                <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"></div>
+              </div>
+              <!--스와이퍼 버튼 -->
+            </div>
+          </div>
+          <div class="w-[450px] bg-[#f4f6f9] px-[64px] py-[80px] rounded-[50px] flex flex-col justify-between h-[650px]" style="box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.15);">
+            <h1 class="text-[40px] font-bold text-[#0062CC]">인증은 더 쉽게</h1>
+
+            <div class="relative flex flex-col w-full gap-10 text-left swiper-pagination">
+              <span class="swiper-pagination-bullet" >공동인증서</span>
+              <span class="swiper-pagination-bullet">증명 발급 서비스</span>
+              <span class="swiper-pagination-bullet">전자계약 서비스</span>
+            </div>
+            <!-- 스와이퍼 페이지네이션 -->
+
+          </div>
+          
+          
+        </main>
+        <!-- 스와이퍼 -->
+        
+      </div>
+      <img src="./img/kica_text.png" alt="" class="bg">
+        <img src="./img/kica_text.png" alt="" class="bg2">
+    </section>
+    <!-- 기본값섹션 -->
+
+  
+    <section class="h-[50vh] normaldiv">
+    <h1 class="hidden">This is a normal section</h1>
+    </section>
+  
+  </div>
+  <!-- <div class="container2">
+    <div class="panel2" >
+      <h1>
+        1-&gt;
+      </h1>
+    </div>
+    <div class="panel2" >
+      <h1>
+        2-&gt;
+      </h1>
+    </div>
+    <div class="panel2" >
+      <h1>
+        3-&gt;
+      </h1>
+    </div>
+    <div class="panel2" >
+      <h1>
+        4-&gt;
+      </h1>
+    </div>
+  </div> -->
+  <!-- 스크롤 2 -->
+  
+
+</div>
+
+
+
+
+
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<!-- 메인섹션에 스크롤 효과 -->
+<script  src="./js/main_scroll.js"></script>
+<script  src="./js/smooth_scroll.js"></script>
+
+<!-- 제이쿼리 -->
+<script  defer src="https://releases.jquery.com/git/jquery-git.js"></script>
+
+<!-- 헤더 -->
+<script  defer src="./js/header.js"></script>
+
+<!-- 스와이퍼 -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+<script  src="./js/swiper.js"></script>
+
+</body>
+</html>

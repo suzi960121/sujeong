@@ -1,0 +1,105 @@
+.gsap-marker-scroller-start,.gsap-marker-scroller-end, .gsap-marker-scroller-start, .gsap-marker-scroller-end, .gsap-marker-start, .gsap-marker-end{
+
+  display: none !important;
+}
+
+
+
+.normaldiv{
+  display:flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* background: teal; */
+  float:none;
+}
+.cabecera{
+  width:100%;
+  height:100px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:-webkit-sticky;
+  position:sticky;
+  top:0;
+  /* background:lightgray; */
+  font-weight: 600;
+  font-size: 1.5em;
+}
+.container, .container2 {
+  /* width: 500%; */
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.container2{
+  flex-direction:row-reverse;
+}
+
+.panel, .panel2 {
+  width: 1600px;
+  flex: none;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+}
+.panel40{
+  width:40%;
+  flex: 0 0 40%;
+}
+.panel60{
+  width:60%;
+  flex: 0 0 60%;
+}
+
+.panel:nth-child(odd) {
+  /* background-color: lightblue; */
+}
+.panel2:nth-child(odd) {
+  /* background-color: pink; */
+}
+
+@media (max-width: 767px) {
+  .panel, .panel2, .panel40, .panel60 {
+    /* background-color: lightpink; */
+    width: 100%;
+    flex: 0 0 100%;
+  }
+}
+
+/* a메인 히어로 화면 */
+.hero {
+
+}
+/*  text reveal Animation */
+.hero h1{
+  height: 100%;
+  width: 100%;
+}
+
+h1 .line {
+  text-align: left;
+  width: 100%;
+  height: 156px;
+  position: relative;
+  overflow: hidden;
+}
+h1 .line span {
+  position: absolute;
+  line-height: 130%;
+}
+
+
+.pin-spacer{
+  width: 100% !important;
+  margin:  0 auto !important;
+}
+.pin-spacer .container.hero {
+  width: 100% !important;
+  max-width: 100% !important;
+  top:0 !important;
+  background: url(../img/main_bg.png) center/cover no-repeat;
+
+}
