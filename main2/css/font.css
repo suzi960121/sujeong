@@ -1,0 +1,36 @@
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot);
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot?#iefix) format("embedded-opentype"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff) format("woff"),
+        url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.ttf) format("truetype");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'DakiB';
+    src: url('../font/DakiB.ttf') format('truetype');
+    src: url('../font/DakiM.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'DakiM';
+    src: url('../font/DakiM.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'DakiMTitle';
+    src: url('../font/DakiMTitle.ttf') format('truetype');
+
+}
+@font-face {
+    font-family: 'DakiL';
+    src: url('../font/DakiL.ttf') format('truetype');
+}
